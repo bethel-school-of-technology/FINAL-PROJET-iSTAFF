@@ -1,0 +1,78 @@
+.topnav {
+    background-color: #00020f;
+    overflow: hidden;
+  }
+.topnav a {
+    float: left;
+    color: #e8e8d8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+.films > img{
+    width: auto;
+    height: 400px;
+}
+h3 {
+    margin: 1em auto;
+    padding: 0 1em;
+
+    font-size: 1.15em;
+    max-width: 35em;
+}
+h1 {
+    font: bold;
+    font-size: 3em;
+}
+img {
+    max-width: 100%;
+}
+.col-1 {
+    width: 8.33%;
+}
+/* this looks the best out of every other thing I tried. */
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+ }
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+ }
+@media all and (max-width: 500px) {
+    .navigation {
+         flex-direction: column;
+    }
+ }
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {  }
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {  }
+
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1) {  }
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {  }
+
+
+

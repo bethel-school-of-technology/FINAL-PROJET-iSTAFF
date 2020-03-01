@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Capture Photo</title>
+
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        var pictureSource;
+        var destinationType;
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            pictureSource=navigator.camera.PictureSourceType;
+            destinationType=navigator.camera.destinationType;
+        }
+        
+        function onPhotoDataSuccess(imageData) {
+             
+            var smallImage.src = "data:image/jpeg;base64," + imageData;
+            smallImage.style.display = 'block';
+            smallImage.src = "data:image/jpeg;base64," + imageData;
+        }
+
+        function onPhotoDataSuccess(imageURI) {
+            var largeImage = document.getElementById('largeImage');
+            largeImage.style.display = 'block';
+            largeImage.src = imageURI;
+       }
+
+       function capturePhoto() {
+           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality:50, destinationType.DATA_URL });
+       }
+
+       function capturePhotoEdit() {
+           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true, destinationType.DATA_URL });
+       }
+
+       function getPhoto(source) {
+           navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, destinationType: destinationType.FILE_URI, sourceType: source});
+       }
+
+       funtion onFail(message) {
+           alert('Failed because: ' + message);
+       }
+
+        </script>
+    </head>
+        <body>
+            <button onClick="capturePhoto();">Capture Photo</button> <br>
+            <button onClick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+            <button onClick="getPhoto(pictureSource.PHOTOLIBARY);"> From Photot Library</button> <br> 
+            <button onClick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Albums</button> <br>
+            <img style="display:none;width:60px;height:60px;" id="smallImage" src=""/>
+            <img style="display:none;" id="largeImage" src="" />
+        </body>
+</html>

@@ -1,0 +1,40 @@
+[class*='col-'] {
+    float: left;
+ }
+ *, 
+ *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+ body {
+     font-size: 100%;
+ }
+ .header {
+    font-size: 4em;
+    text-align: center;
+ }
+.col-2 {
+    width: 16.66%;
+ }
+.col-4 {
+    width: 33.33%;
+    text-align: center;
+}
+.col-6 {
+
+    height: 50%;
+    width: 50%;
+}
+.col-10 {
+    width: 83.33%;
+    font-family: 'Permanent Marker', cursive;
+ }
+
+.col-12 {
+    width: 100%;
+    background: cornflowerblue;
+ }
+ .module {
+     padding: 20px;
+ }

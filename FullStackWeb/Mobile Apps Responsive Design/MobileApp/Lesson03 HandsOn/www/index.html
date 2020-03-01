@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+     
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Camera & GPS</title>
+        
+    </head>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="mapApp">
+                <p class="event listening">Take a Photo</p>
+                <p class="event received">Take a picutre</p>
+                <img id="photo">
+                <button id="btn"> Snap Photo!</button>
+                <div style='position:absolute; top:0; right:0; bottom:0; left:0;' id='map'></div>
+                <script type="text/javascript" src="cordova.js"></script>
+                <script type="text/javascript" src="js/index.js"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
